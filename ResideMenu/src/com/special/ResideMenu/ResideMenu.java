@@ -19,6 +19,8 @@ import com.nineoldandroids.view.ViewHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 /**
  * User: special
  * Date: 13-12-10
