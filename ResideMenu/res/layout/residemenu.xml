@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/iv_background"
@@ -17,6 +19,7 @@
         android:scaleType="fitXY" />
 
     <RelativeLayout
+        android:id="@+id/body"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="12dp"
@@ -24,102 +27,91 @@
         android:paddingRight="16dp"
         android:paddingTop="12dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/profile"
-            app:border_color="#FFFFFF"
-            app:border_width="2dp" />
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ScrollView
-            android:id="@+id/sv_left_menu"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/profile_image"
-            android:layout_below="@+id/profile_image"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginTop="39dp"
-            android:paddingLeft="30dp"
-            android:scrollbars="none">
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                app:border_color="#FFFFFF"
+                app:border_width="2dp" />
 
-            <LinearLayout
-                android:id="@+id/layout_left_menu"
+
+            <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_alignTop="@+id/profile_image"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
 
-            </LinearLayout>
-        </ScrollView>
-
-        <ScrollView
-            android:id="@+id/sv_right_menu"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|center_vertical"
-            android:layout_alignLeft="@+id/profile_image"
-            android:layout_below="@+id/profile_image"
-            android:layout_marginTop="39dp"
-            android:paddingRight="30dp"
-            android:scrollbars="none">
-
-            <LinearLayout
-                android:id="@+id/layout_right_menu"
+            <TextView
+                android:id="@+id/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="right"
-                android:orientation="vertical">
+                android:layout_alignLeft="@+id/title"
+                android:layout_below="@+id/title"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-            </LinearLayout>
-        </ScrollView>
-
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/profile_image"
-            android:layout_toRightOf="@+id/profile_image"
-            android:text="Harley Quinn"
-            android:textSize="25sp"
-            android:layout_marginLeft="15dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:text="R$ 2.951,40"
-            android:id="@+id/amount"
-            android:layout_below="@+id/username"
-            android:layout_alignLeft="@+id/username" />
+            <TextView
+                android:id="@+id/extrasubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/subtitle"
+                android:layout_below="@+id/subtitle"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="em conta"
-            android:id="@+id/textView"
-            android:layout_below="@+id/amount"
-            android:layout_alignRight="@+id/amount" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Sair"
             android:id="@+id/exit"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Preciso de ajuda"
-            android:id="@+id/helpme"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentLeft="true"
+            android:text="Sair"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_margin="12dp"/>
+
+        <TextView
+            android:id="@+id/helpme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Preciso de ajuda"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_margin="12dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header">
+
+            <ScrollView
+                android:id="@+id/scroll_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/layout_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
     </RelativeLayout>
-</merge>
+</RelativeLayout>
