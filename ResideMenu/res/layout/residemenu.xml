@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/iv_shadow"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="@drawable/shadow"
         android:scaleType="fitXY" />
 
@@ -72,30 +72,11 @@
                 android:textSize="15sp" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:text="Sair"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_margin="12dp"/>
-
-        <TextView
-            android:id="@+id/helpme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:text="Preciso de ajuda"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_margin="12dp"/>
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/header">
+            android:layout_below="@+id/header"
+            android:layout_marginTop="26dp">
 
             <ScrollView
                 android:id="@+id/scroll_menu"
@@ -108,10 +89,28 @@
                     android:id="@+id/layout_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                </LinearLayout>
+                    android:orientation="vertical" />
             </ScrollView>
+
+            <TextView
+                android:id="@+id/bottomOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="50dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/extraBottomOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="50dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>
