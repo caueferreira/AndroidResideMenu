@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -39,7 +40,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         resideMenu.setBackground(R.drawable.menu_background);
         resideMenu.attachToActivity(this);
         resideMenu.setMenuListener(menuListener);
-        //valid scale factor is between 0.0f and 1.0f. leftmenu'width is 150dip. 
+        //valid scale factor is between 0.0f and 1.0f. leftmenu'width is 150dip.
         resideMenu.setScaleValue(0.6f);
 
         // create menu items;
@@ -82,6 +83,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
+        Log.i("View clicked", "" + view.getId());
 
         if (view == itemHome){
             changeFragment(new HomeFragment());
@@ -99,12 +101,12 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     private ResideMenu.OnMenuListener menuListener = new ResideMenu.OnMenuListener() {
         @Override
         public void openMenu() {
-            Toast.makeText(mContext, "Menu is opened!", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(mContext, "Menu is opened!", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void closeMenu() {
-            Toast.makeText(mContext, "Menu is closed!", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(mContext, "Menu is closed!", Toast.LENGTH_SHORT).show();
         }
     };
 
