@@ -19,7 +19,6 @@ import java.util.UUID;
  */
 public class ResideMenuItem extends LinearLayout {
 
-    private static int id;
     /**
      * menu item  icon
      */
@@ -28,10 +27,6 @@ public class ResideMenuItem extends LinearLayout {
      * menu item  title
      */
     private TextView tv_title;
-
-    static {
-        id = (new Random().nextInt(899999) + 1000000) * -1;
-    }
 
     public ResideMenuItem(Context context) {
         super(context);
@@ -86,10 +81,4 @@ public class ResideMenuItem extends LinearLayout {
     public void setTitle(String title) {
         tv_title.setText(title);
     }
-
-    @Override
-    public int getId() {
-        return id;
-    }
-
 }
