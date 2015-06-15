@@ -2,6 +2,7 @@ package com.special.ResideMenu;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,6 +46,20 @@ public class ResideMenuItem extends LinearLayout {
         initViews(context);
         iv_icon.setImageResource(icon);
         tv_title.setText(title);
+    }
+
+    public ResideMenuItem(Context context,  String title) {
+        super(context);
+        initViews(context);
+        tv_title.setText(title);
+        iv_icon.setVisibility(View.GONE);
+    }
+
+    public ResideMenuItem(Context context,  int title) {
+        super(context);
+        initViews(context);
+        tv_title.setText(title);
+        iv_icon.setVisibility(View.GONE);
     }
 
     private void initViews(Context context) {

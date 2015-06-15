@@ -92,25 +92,21 @@
                     android:orientation="vertical" />
             </ScrollView>
 
-            <TextView
+            <RelativeLayout
                 android:id="@+id/bottomOption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginBottom="50dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@android:color/white" />
+                android:layout_marginBottom="35dp" />
 
-            <TextView
+            <RelativeLayout
                 android:id="@+id/extraBottomOption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="50dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@android:color/white" />
+                android:layout_marginBottom="35dp" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

@@ -74,9 +74,9 @@ public class ResideMenu extends FrameLayout {
     // Valid scale factor is between 0.0f and 1.0f.
     private float mScaleValue = 0.5f;
 
-    private RelativeLayout body;
+    private RelativeLayout body, bottomOption, extraBottomOption;
     private CircleImageView profileImage;
-    private TextView title, subtitle, extrasubtitle, bottomOption, extraBottomOption;
+    private TextView title, subtitle, extrasubtitle;
 
     public ResideMenu(Context context) {
         super(context);
@@ -96,8 +96,8 @@ public class ResideMenu extends FrameLayout {
         subtitle = (TextView) findViewById(R.id.subtitle);
         extrasubtitle = (TextView) findViewById(R.id.extrasubtitle);
         body = (RelativeLayout) findViewById(R.id.body);
-        bottomOption = (TextView) findViewById(R.id.bottomOption);
-        extraBottomOption = (TextView) findViewById(R.id.extraBottomOption);
+        bottomOption = (RelativeLayout) findViewById(R.id.bottomOption);
+        extraBottomOption = (RelativeLayout) findViewById(R.id.extraBottomOption);
     }
 
     @Override
@@ -175,12 +175,12 @@ public class ResideMenu extends FrameLayout {
         this.extrasubtitle.setText(extrasubtitle);
     }
 
-    public void setBottomOption(String bottomOption) {
-        this.bottomOption.setText(bottomOption);
+    public void setBottomOption(final ResideMenuItem resideMenuItem) {
+        bottomOption.addView(resideMenuItem);
     }
 
-    public void setExtraBottomOption(String extraBottomOption) {
-        this.extraBottomOption.setText(extraBottomOption);
+    public void setExtraBottomOption(final ResideMenuItem resideMenuItem) {
+        extraBottomOption.addView(resideMenuItem);
     }
 
     /**
