@@ -251,7 +251,7 @@ public class ResideMenu extends FrameLayout {
     }
 
     private void rebuildMenu() {
-//        layoutMenu.removeAllViews();
+        layoutMenu.removeAllViews();
         for (ResideMenuItem leftMenuItem : leftMenuItems)
             layoutMenu.addView(leftMenuItem);
         for (ResideMenuItem rightMenuItem : rightMenuItems)
